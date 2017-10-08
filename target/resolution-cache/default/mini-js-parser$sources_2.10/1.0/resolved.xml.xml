@@ -4,7 +4,7 @@
 		module="mini-js-parser$sources_2.10"
 		revision="1.0"
 		status="integration"
-		publication="20170428002859"
+		publication="20171008184451"
 	/>
 	<configurations>
 		<conf name="default" visibility="public" description=""/>
