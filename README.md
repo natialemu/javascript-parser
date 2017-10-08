@@ -12,8 +12,8 @@ This is a scala-based javascript parser that builds an abstract syntax tree for 
 
 ## Grammar
 
-`expression ::= term { { "+" | "-" } term }*       
-term       ::= factor { { "*" | "/" | "%" } factor }*
+`expression ::= term { { "+" | "-" } term }*   \n    
+term       ::= factor { { "*" | "/" | "%" } factor }* \n
 factor     ::= number | "+" factor | "-" factor | "(" expression ")"`
 
 
