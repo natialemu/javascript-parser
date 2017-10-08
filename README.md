@@ -12,9 +12,18 @@ This is a scala-based javascript parser that builds an abstract syntax tree for 
 
 ## Grammar
 
-`expression ::= term { { "+" | "-" } term }*   \n    
-term       ::= factor { { "*" | "/" | "%" } factor }* \n
-factor     ::= number | "+" factor | "-" factor | "(" expression ")"`
+`expression ::= term { { "+" | "-" } term }*  `   
+`term       ::= factor { { "*" | "/" | "%" } factor }* `
+`factor ::= ident { "." ident }* | number | "+" factor | "-" factor | "(" expr ")" | struct `
+
+`statement   ::= expression ";" | assignment | conditional | loop | block`
+`assignment  ::= ident { "." ident }* "=" expression ";"`
+`conditional ::= "if" "(" expression ")" block [ "else" block ]`
+`loop        ::= "while" "(" expression ")" block`
+`block       ::= "{" statement* "}"`
+
+`struct ::= "{" "}" | "{" field { "," field }* "}"`
+`field  ::= ident ":" expr`
 
 
 ## Tests
