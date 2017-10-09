@@ -35,5 +35,5 @@ This is a scala-based javascript parser that builds an abstract syntax tree for 
 
 ## Tests
 
-
+![Alt text](/resources/min_js_parser_tests.png?raw=true "")
 
